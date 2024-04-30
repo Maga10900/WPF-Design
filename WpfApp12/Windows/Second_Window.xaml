@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp12.Windows.Second_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp12.Windows"
+        mc:Ignorable="d"
+        Title="Second_Window" Height="700" Width="350" WindowStartupLocation="CenterScreen">
+    <Grid Background="GhostWhite">
+        <!--labelin backgorundu borderin ustune cixdiqi ucun corner radius ishlemir-->
+        <Label Content="clients" FontSize="45" FontWeight="Bold" Foreground="DarkBlue"  HorizontalAlignment="Center" Margin="0 10 0 0"/>
+        <Label Content="Welcome Tunar!" Foreground="DarkCyan" HorizontalAlignment="Center" Margin="0 80" FontSize="18"/>
+        <Button Template="{DynamicResource MyButton}" Height="200" Width="330" Background="#01133d" Content="create new client" Foreground="White" FontSize="30" Margin="0 0 0 200"/>
+        <Button Template="{DynamicResource MyButton}" Height="200" Width="330" Background="#01133d" Content="all clients" Foreground="White" FontSize="30" Margin="0 270 0 0"/>
+    </Grid>
+</Window>

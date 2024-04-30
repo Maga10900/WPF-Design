@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ControlTemplate x:Key="MyButton">
+        <ControlTemplate.Triggers>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.20" From="20" To="15" Storyboard.TargetProperty="FontSize"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.20" From="15" To="20" Storyboard.TargetProperty="FontSize"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </ControlTemplate.Triggers>
+        <Grid>
+            <Border CornerRadius="4" BorderBrush="#01133d" BorderThickness="2"/>
+            
+            <Label  Background="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Background}"
+                    Content="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Content}" 
+                    FontSize="{Binding RelativeSource={RelativeSource TemplatedParent},Path=FontSize}"
+                    Foreground="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Foreground}"
+                    VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>
